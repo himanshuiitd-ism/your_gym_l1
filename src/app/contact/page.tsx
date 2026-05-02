@@ -80,8 +80,8 @@ export default function ContactPage() {
                   <input name="name" type="text" id="name" required className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground focus:outline-none focus:border-primary transition-colors" placeholder="ENTER FULL NAME" />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-[10px] font-bold uppercase tracking-widest text-foreground/70">EMAIL ADDRESS</label>
-                  <input name="email" type="email" id="email" required className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground focus:outline-none focus:border-primary transition-colors" placeholder="NAME@EMAIL.COM" />
+                  <label htmlFor="phone" className="text-[10px] font-bold uppercase tracking-widest text-foreground/70">PHONE NUMBER</label>
+                  <input name="phone" type="tel" id="phone" required className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground focus:outline-none focus:border-primary transition-colors" placeholder="+1 (555) 000-0000" />
                 </div>
               </div>
               
