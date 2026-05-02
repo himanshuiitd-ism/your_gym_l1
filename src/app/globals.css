@@ -16,13 +16,13 @@
 }
 
 :root {
-  /* Light mode variables - using a premium dark forest green */
+  /* Light mode variables - using a vibrant professional Royal Blue */
   --bg: #f4f4f5;
   --fg: #09090b;
   --card: #ffffff;
-  --border: rgba(0, 0, 0, 0.15);
-  --primary: #064e3b;
-  --primary-hover: #065f46;
+  --border: rgba(0, 0, 0, 0.1);
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
   --primary-content: #ffffff;
 }
 

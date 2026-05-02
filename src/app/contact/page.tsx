@@ -17,7 +17,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-darker to-transparent" />
         </div>
         
-        <div className="relative z-10 px-6 max-w-7xl mx-auto w-full text-center">
+        <div className="relative z-10 px-4 sm:px-6 max-w-7xl mx-auto w-full text-center">
           <h1 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter text-foreground mb-4 leading-none">
             GET IN <span className="text-foreground">TOUCH</span>
           </h1>
@@ -29,7 +29,7 @@ export default function ContactPage() {
 
       {/* Contact Content */}
       <section className="py-12 bg-background -mt-24 relative z-20">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8">
           
           {/* Left Form */}
           <div className="bg-background p-8 md:p-12 border-l-4 border-primary">
@@ -138,7 +138,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-primary-content py-24 mx-0 text-center relative overflow-hidden">
+      <section className="bg-primary text-primary-content py-16 md:py-24 mx-0 text-center relative overflow-hidden">
         {/* Large background "NO MERCY" watermark text */}
         <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
            <div className="text-[12rem] md:text-[20rem] font-black italic uppercase text-black/5 whitespace-nowrap leading-none tracking-tighter">

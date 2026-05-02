@@ -17,7 +17,7 @@ export default function ProgramsPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-darker via-darker/80 to-transparent" />
         </div>
         
-        <div className="relative z-10 px-6 max-w-7xl mx-auto w-full">
+        <div className="relative z-10 px-4 sm:px-6 max-w-7xl mx-auto w-full">
           <h1 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter text-white mb-6 leading-none max-w-2xl">
             PRECISION<br />
             <span className="text-primary">PERFORMANCE</span>
@@ -29,8 +29,8 @@ export default function ProgramsPage() {
       </section>
 
       {/* Programs Grid */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           
           {/* Card 1: Personal Training (spans 2 cols) */}
           <div className="md:col-span-2 relative h-[500px] bg-background group overflow-hidden">
@@ -90,7 +90,7 @@ export default function ProgramsPage() {
                <p className="text-xs text-foreground/70 leading-relaxed mb-8">
                  High-intensity group sessions designed to break plateaus through competitive atmosphere and professional programming.
                </p>
-               <Link href="/facilities" className="border border-border-color hover:bg-background-border text-foreground text-xs font-bold uppercase tracking-widest py-3 px-6 text-center transition-colors">
+               <Link href="/facilities" className="border border-border-color hover:bg-background-border text-foreground text-xs font-bold uppercase tracking-widest py-3 px-4 sm:px-6 text-center transition-colors">
                  VIEW SCHEDULE
                </Link>
              </div>
@@ -108,7 +108,7 @@ export default function ProgramsPage() {
                    Cold plunge, infrared saunas, and compression therapy. Because the win is earned in the recovery phase.
                  </p>
                </div>
-               <Link href="/facilities" className="border border-border-color hover:bg-background-border text-foreground text-[10px] font-bold uppercase tracking-widest py-3 px-6 text-center transition-colors mt-auto">
+               <Link href="/facilities" className="border border-border-color hover:bg-background-border text-foreground text-[10px] font-bold uppercase tracking-widest py-3 px-4 sm:px-6 text-center transition-colors mt-auto">
                  EXPLORE SPA
                </Link>
             </div>
@@ -119,7 +119,7 @@ export default function ProgramsPage() {
 
       {/* CTA Section */}
       <section className="bg-primary text-primary-content">
-        <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between">
           <div className="mb-8 md:mb-0 max-w-xl">
             <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-4 relative z-10">
               READY TO<br/>
@@ -141,7 +141,7 @@ export default function ProgramsPage() {
 
       {/* Stats Section */}
       <section className="bg-background py-16 border-b border-border-color">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <div className="text-primary text-3xl font-black italic mb-2">150+</div>
             <div className="text-[10px] text-foreground/60 font-bold tracking-widest uppercase">ELITE ATHLETES</div>

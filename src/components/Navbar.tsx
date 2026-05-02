@@ -61,7 +61,7 @@ export default function Navbar() {
               )}
             </button>
           )}
-          <Link href="/contact" className="bg-primary hover:bg-primary-hover text-primary-content text-xs font-bold uppercase tracking-widest py-3 px-6 transition-all shadow-[0_0_20px_rgba(207,255,4,0.6)] hover:shadow-[0_0_30px_rgba(207,255,4,0.8)] hover:scale-105">
+          <Link href="/contact" className="hidden md:flex hidden md:flex bg-primary hover:bg-primary-hover text-primary-content text-xs font-bold uppercase tracking-widest py-3 px-6 transition-all shadow-[0_0_20px_rgba(207,255,4,0.6)] hover:shadow-[0_0_30px_rgba(207,255,4,0.8)] hover:scale-105">
             Join Now
           </Link>
         </div>

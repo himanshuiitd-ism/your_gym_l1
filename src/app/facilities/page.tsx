@@ -17,7 +17,7 @@ export default function FacilitiesPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
         </div>
         
-        <div className="relative z-10 px-6 max-w-7xl mx-auto w-full text-center">
+        <div className="relative z-10 px-4 sm:px-6 max-w-7xl mx-auto w-full text-center">
           <h1 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter text-white mb-6 leading-none">
             BUILT FOR<br />
             <span className="text-primary">VICTORY</span>
@@ -29,8 +29,8 @@ export default function FacilitiesPage() {
       </section>
 
       {/* The Arsenal Section */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-border-color pb-4 gap-4">
             <h2 className="text-3xl font-black italic uppercase tracking-widest">THE ARSENAL</h2>
             <p className="text-[10px] text-foreground/60 font-bold tracking-widest uppercase max-w-sm text-left md:text-right">
@@ -71,8 +71,8 @@ export default function FacilitiesPage() {
       </section>
 
       {/* Recovery & Refinement */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <div className="text-primary text-[10px] font-bold tracking-widest uppercase mb-2">BEYOND THE FLOORS</div>
             <h2 className="text-4xl font-black italic uppercase mb-12">RECOVERY &<br/>REFINEMENT</h2>
@@ -123,8 +123,8 @@ export default function FacilitiesPage() {
       </section>
 
       {/* Equipment Manifesto */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl font-black italic uppercase tracking-widest text-center mb-16">EQUIPMENT MANIFESTO</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -156,7 +156,7 @@ export default function FacilitiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-primary-content py-24 mx-6 mb-24 max-w-7xl md:mx-auto text-center">
+      <section className="bg-primary text-primary-content py-16 md:py-24 mx-6 mb-24 max-w-7xl md:mx-auto text-center">
         <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-6 max-w-2xl mx-auto leading-none">
           READY TO TRAIN LIKE AN ATHLETE?
         </h2>

@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import BottomNav from "@/components/BottomNav";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Elite Performance",
-  description: "Elite training for those who refuse to settle.",
+  description: "Elite training facility for peak physical and mental performance.",
 };
 
 export default function RootLayout({
@@ -16,9 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen pt-20">
+      <body className="flex flex-col min-h-screen pt-16 md:pt-20 pb-24 md:pb-0">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <Navbar />
+          <BottomNav />
 
         {/* Main Content */}
         <main className="flex-grow">

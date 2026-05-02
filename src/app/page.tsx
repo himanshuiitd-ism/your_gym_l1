@@ -18,7 +18,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
         </div>
         
-        <div className="relative z-10 px-6 max-w-7xl mx-auto w-full pt-10">
+        <div className="relative z-10 px-4 sm:px-6 max-w-7xl mx-auto w-full pt-10">
           <div className="inline-block bg-primary text-primary-content text-xs font-bold uppercase tracking-widest py-1 px-3 mb-6 shadow-[0_0_10px_rgba(207,255,4,0.5)]">
             ESTABLISHED 2024
           </div>
@@ -48,8 +48,8 @@ export default function Home() {
       </section>
 
       {/* Engineered for Results */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-end mb-12 border-b border-border-color pb-4">
             <h2 className="text-3xl font-black italic uppercase tracking-widest text-foreground drop-shadow-lg">ENGINEERED FOR RESULTS</h2>
             <span className="text-xs text-primary font-bold tracking-widest uppercase hidden md:inline-block">/ PERFORMANCE ARCHITECTURE</span>
@@ -118,15 +118,15 @@ export default function Home() {
       </section>
 
       {/* Dominate Your Discipline */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6 text-center mb-16">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center mb-16">
           <h2 className="text-3xl font-black italic uppercase tracking-widest mb-4 text-foreground">DOMINATE YOUR DISCIPLINE</h2>
           <p className="text-base text-foreground/80 max-w-xl mx-auto leading-relaxed font-medium">
             Selected high-intensity programs designed to destroy plateaus and forge an unbreakable physique.
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Program 1 */}
           <div className="relative h-[600px] group overflow-hidden rounded-xl shadow-2xl border border-border-color hover:border-primary/50 transition-all">
             <Image src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1000&auto=format&fit=crop" alt="HIIT" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -169,13 +169,13 @@ export default function Home() {
       </section>
 
       {/* Stats Bar */}
-      <section className="py-20 bg-background border-y border-border-color relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-background border-y border-border-color relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
           <svg className="w-full h-full text-primary" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path d="M0,50 Q25,0 50,50 T100,50 L100,100 L0,100 Z" />
           </svg>
         </div>
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
           <div className="p-6 bg-card backdrop-blur-md rounded-lg border border-border-color hover:border-primary/30 transition-colors">
             <div className="text-primary text-4xl font-black italic mb-2 drop-shadow-[0_0_10px_rgba(207,255,4,0.4)]">800+</div>
             <div className="text-xs font-bold tracking-widest uppercase text-foreground">ELITE MEMBERS</div>
@@ -196,7 +196,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-40 overflow-hidden bg-background">
+      <section className="relative py-20 md:py-40 overflow-hidden bg-background">
         <div className="absolute inset-0 z-0">
           <Image 
             src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop" 
@@ -208,7 +208,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
         </div>
         
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-widest mb-6 text-white drop-shadow-2xl">
             NO MORE <span className="text-primary">EXCUSES.</span>
           </h2>

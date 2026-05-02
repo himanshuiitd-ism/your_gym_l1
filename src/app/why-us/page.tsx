@@ -17,7 +17,7 @@ export default function WhyUsPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
         </div>
         
-        <div className="relative z-10 px-6 max-w-4xl mx-auto w-full text-center">
+        <div className="relative z-10 px-4 sm:px-6 max-w-4xl mx-auto w-full text-center">
           <div className="inline-block bg-primary text-primary-content text-[10px] font-bold uppercase tracking-widest py-1 px-3 mb-6 shadow-[0_0_10px_rgba(207,255,4,0.5)]">
             BEYOND THE BODY
           </div>
@@ -32,8 +32,8 @@ export default function WhyUsPage() {
       </section>
 
       {/* Pillars of Vitality */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-16 border-l-4 border-primary pl-6">
             <h2 className="text-3xl font-black italic uppercase tracking-widest text-foreground">
               THE PILLARS OF<br/><span className="text-primary">VITALITY</span>
@@ -70,15 +70,15 @@ export default function WhyUsPage() {
       </section>
 
       {/* The Gym Advantage */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6 text-center mb-16">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center mb-16">
           <h2 className="text-3xl font-black italic uppercase tracking-widest mb-4 text-foreground">THE <span className="text-primary">GYM ADVANTAGE</span></h2>
           <p className="text-sm text-foreground/70 max-w-xl mx-auto leading-relaxed font-medium">
             We give you the tools, but elite performance requires elite environments.
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-background p-10 text-center border border-border-color hover:border-primary transition-all hover:-translate-y-2 shadow-xl group">
             <svg className="w-12 h-12 mx-auto text-primary mb-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
             <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">ELITE HARDWARE</h3>
@@ -106,8 +106,8 @@ export default function WhyUsPage() {
       </section>
 
       {/* Fuel for Results */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div className="bg-[#6b8e23] h-[400px] flex flex-col items-center justify-center text-foreground shadow-[0_0_30px_rgba(107,142,35,0.4)]">
             <svg className="w-32 h-32 mb-6 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L9.5 5.5 11 9l-3 4h2l-2 5h10l-2-5h2l-3-4 1.5-3.5L12 2zm0 2.8l1.5 2.2L12 9l2.5 3H12l1.5 4h-3l1.5-4h-2.5L12 9l-1.5-2 1.5-2.2z"/></svg>
             <h2 className="text-4xl font-black italic uppercase tracking-widest mb-2">SAFENTION</h2>
@@ -148,8 +148,8 @@ export default function WhyUsPage() {
       </section>
 
       {/* Bio Recovery Zone */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl font-black italic uppercase tracking-widest mb-4 text-foreground">THE <span className="text-primary">BIO-RECOVERY ZONE</span></h2>
           <p className="text-sm text-foreground/70 max-w-2xl leading-relaxed font-medium mb-12">
             Growth doesn't happen in the gym; it happens in the recovery. We provide the elite tools to ensure you bounce back stronger.
@@ -181,8 +181,8 @@ export default function WhyUsPage() {
       </section>
 
       {/* Daily Commitment */}
-      <section className="py-24 bg-background">
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="bg-background border-t-4 border-primary p-12 md:p-16 flex flex-col md:flex-row items-center gap-12 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
             <div className="md:w-2/3">
               <div className="inline-block bg-primary text-primary-content text-[9px] font-bold uppercase tracking-widest py-1 px-2 mb-6">
@@ -192,7 +192,7 @@ export default function WhyUsPage() {
               <p className="text-sm text-foreground/80 leading-relaxed font-medium mb-8">
                 Motivation is fleeting. Discipline is constant. Showing up every day at Elite Performance isn't just about fitness—it's about building the habit of excellence that spills over into your career, your relationships, and your life.
               </p>
-              <Link href="/contact" className="inline-block bg-primary hover:bg-primary-hover text-primary-content text-[10px] font-bold uppercase tracking-widest py-3 px-6 transition-colors shadow-[0_0_15px_rgba(207,255,4,0.4)]">
+              <Link href="/contact" className="inline-block bg-primary hover:bg-primary-hover text-primary-content text-[10px] font-bold uppercase tracking-widest py-3 px-4 sm:px-6 transition-colors shadow-[0_0_15px_rgba(207,255,4,0.4)]">
                 I AM READY TO COMMIT ▻
               </Link>
             </div>
@@ -210,8 +210,8 @@ export default function WhyUsPage() {
       </section>
 
       {/* Quote */}
-      <section className="py-24 bg-background text-center">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-background text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <svg className="w-12 h-12 text-primary mx-auto mb-8 opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
           <h2 className="text-3xl md:text-5xl font-black italic uppercase tracking-widest leading-snug text-primary drop-shadow-[0_0_15px_rgba(207,255,4,0.3)]">
             "DISCIPLINE IS DOING WHAT NEEDS TO BE DONE, EVEN IF YOU DON'T WANT TO DO IT."
@@ -225,7 +225,7 @@ export default function WhyUsPage() {
         <div className="absolute inset-0 z-0 opacity-10">
           <Image src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2000&auto=format&fit=crop" alt="Background Texture" fill className="object-cover" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none drop-shadow-xl">
             YOUR BETTER LIFE <span className="text-primary drop-shadow-[0_0_20px_rgba(207,255,4,0.6)]">STARTS HERE.</span>
           </h2>
