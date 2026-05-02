@@ -1,32 +1,55 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #cfff04;
-  --color-primary-hover: #b4df00;
-  --color-dark: #000000;
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-content: var(--primary-content);
+  
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-card: var(--card);
+  --color-border-color: var(--border);
+  --color-image-text: #ffffff;
+  --color-image-overlay: rgba(0, 0, 0, 0.6);
+  --color-dark: #09090b;
   --color-darker: #000000;
-  --color-dark-card: #000000;
-  --color-dark-border: rgba(0, 0, 0, 0.4);
 }
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  /* Light mode variables - using a premium dark forest green */
+  --bg: #f4f4f5;
+  --fg: #09090b;
+  --card: #ffffff;
+  --border: rgba(0, 0, 0, 0.15);
+  --primary: #064e3b;
+  --primary-hover: #065f46;
+  --primary-content: #ffffff;
+}
+
+.dark {
+  /* Dark mode variables (default) - keeping the neon green */
+  --bg: #000000;
+  --fg: #ffffff;
+  --card: rgba(0, 0, 0, 0.4);
+  --border: rgba(0, 0, 0, 0.4);
+  --primary: #cfff04;
+  --primary-hover: #b4df00;
+  --primary-content: #000000;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: black;
+  color: var(--color-foreground);
+  background: var(--color-background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom Selection Color */
 ::selection {
   background-color: var(--color-primary);
-  color: black;
+  color: #000000;
 }
 
 /* Utility to ensure text remains crisp */

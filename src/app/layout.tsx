@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Elite Performance",
@@ -14,9 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="flex flex-col min-h-screen pt-20">
-        <Navbar />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <Navbar />
 
         {/* Main Content */}
         <main className="flex-grow">
@@ -24,10 +26,10 @@ export default function RootLayout({
         </main>
 
         {/* Footer */}
-        <footer className="bg-black border-t border-[rgba(0,0,0,0.4)] py-12 text-xs font-bold uppercase tracking-widest text-white/60">
+        <footer className="bg-background border-t border-border-color py-12 text-xs font-bold uppercase tracking-widest text-foreground/60">
           <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-col gap-2">
-              <span className="text-white text-lg font-black italic tracking-wider">ELITE PERFORMANCE</span>
+              <span className="text-foreground text-lg font-black italic tracking-wider">ELITE PERFORMANCE</span>
               <span>&copy; {new Date().getFullYear()} ELITE PERFORMANCE GYM. ALL RIGHTS RESERVED.</span>
             </div>
             <div className="flex space-x-6">
@@ -43,6 +45,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
