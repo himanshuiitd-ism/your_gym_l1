@@ -1,7 +1,45 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function ContactPage() {
+  const [result, setResult] = useState<string | null>(null);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus("loading");
+    setResult("Sending Intel...");
+
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("success");
+        setResult("Intel Received. We will contact you soon.");
+        (event.target as HTMLFormElement).reset();
+      } else {
+        console.log("Error", data);
+        setStatus("error");
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.log("Error", error);
+      setStatus("error");
+      setResult("Submission failed. Try again.");
+    }
+  };
+
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
@@ -32,24 +70,24 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8">
           
           {/* Left Form */}
-          <div className="bg-background p-8 md:p-12 border-l-4 border-primary">
+          <div className="bg-background p-8 md:p-12 border-l-4 border-primary shadow-2xl">
             <h2 className="text-3xl font-black italic uppercase tracking-widest mb-8">MESSAGE HQ</h2>
             
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-[10px] font-bold uppercase tracking-widest text-foreground/70">SOLDIER NAME</label>
-                  <input type="text" id="name" className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground focus:outline-none focus:border-primary transition-colors" placeholder="ENTER FULL NAME" />
+                  <input name="name" type="text" id="name" required className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground focus:outline-none focus:border-primary transition-colors" placeholder="ENTER FULL NAME" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-[10px] font-bold uppercase tracking-widest text-foreground/70">EMAIL ADDRESS</label>
-                  <input type="email" id="email" className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground focus:outline-none focus:border-primary transition-colors" placeholder="NAME@EMAIL.COM" />
+                  <input name="email" type="email" id="email" required className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground focus:outline-none focus:border-primary transition-colors" placeholder="NAME@EMAIL.COM" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label htmlFor="program" className="text-[10px] font-bold uppercase tracking-widest text-foreground/70">INTERESTED PROGRAM</label>
-                <select id="program" className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground/70 focus:outline-none focus:border-primary transition-colors appearance-none">
+                <select name="program" id="program" className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground/70 focus:outline-none focus:border-primary transition-colors appearance-none">
                   <option>ELITE STRENGTH & CONDITIONING</option>
                   <option>HIIT RECKONING</option>
                   <option>IRON MASTERY</option>
@@ -59,12 +97,26 @@ export default function ContactPage() {
 
               <div className="space-y-2">
                 <label htmlFor="mission" className="text-[10px] font-bold uppercase tracking-widest text-foreground/70">YOUR MISSION</label>
-                <textarea id="mission" rows={4} className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground focus:outline-none focus:border-primary transition-colors resize-none" placeholder="DESCRIBE YOUR FITNESS GOALS..."></textarea>
+                <textarea name="message" id="mission" rows={4} required className="w-full bg-background border border-border-color px-4 py-3 text-xs text-foreground focus:outline-none focus:border-primary transition-colors resize-none" placeholder="DESCRIBE YOUR FITNESS GOALS..."></textarea>
               </div>
 
-              <button type="button" className="w-full bg-primary hover:bg-primary-hover text-primary-content text-sm font-bold uppercase tracking-widest py-4 transition-colors flex items-center justify-center gap-2">
-                SEND INTEL <span className="text-lg">▻</span>
+              <button 
+                type="submit" 
+                disabled={status === "loading"}
+                className={`w-full bg-primary hover:bg-primary-hover text-primary-content text-sm font-bold uppercase tracking-widest py-4 transition-all flex items-center justify-center gap-2 ${status === "loading" ? "opacity-50 cursor-not-allowed" : "hover:scale-[1.02]"}`}
+              >
+                {status === "loading" ? "TRANSMITTING..." : "SEND INTEL"} <span className="text-lg">▻</span>
               </button>
+
+              {result && (
+                <div className={`text-center text-[10px] font-black uppercase tracking-widest p-3 border ${
+                  status === "success" ? "bg-primary/10 border-primary text-primary" : 
+                  status === "error" ? "bg-red-500/10 border-red-500 text-red-500" : 
+                  "bg-foreground/5 border-border-color text-foreground/50"
+                }`}>
+                  {result}
+                </div>
+              )}
             </form>
           </div>
 
