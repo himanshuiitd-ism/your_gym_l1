@@ -30,90 +30,40 @@ export default function ProgramsPage() {
 
       {/* Programs Grid */}
       <section className="py-16 md:py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          {/* Card 1: Personal Training (spans 2 cols) */}
-          <div className="md:col-span-2 relative h-[500px] bg-background group overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1000&auto=format&fit=crop" alt="Personal Training" fill className="object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
-            <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-darker via-darker/80 to-transparent">
-              <div className="bg-primary text-primary-content text-[10px] font-bold uppercase tracking-widest py-1 px-2 mb-4 self-start">ELITE LEVEL</div>
-              <h3 className="text-3xl md:text-4xl font-black italic uppercase text-white mb-4">PERSONAL TRAINING</h3>
-              <p className="text-xs text-white/80 max-w-md leading-relaxed mb-6">
-                Custom biomechanical assessments and 1-on-1 coaching protocols tailored to your specific genetic ceiling.
-              </p>
-              <div className="flex gap-4 mb-8">
-                <span className="text-primary text-[10px] font-bold uppercase tracking-widest flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                  BIO-DATA TRACKING
-                </span>
-                <span className="text-primary text-[10px] font-bold uppercase tracking-widest flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                  PRO-EQUIPMENT
-                </span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            { title: "Adult Sports", desc: "Competitive leagues and recreational play for all skill levels. Build teamwork and stay active through community sports.", img: "https://images.unsplash.com/photo-1544698310-74ea9d1c8258?q=80&w=1000" },
+            { title: "Aerobics", desc: "Rhythmic aerobic exercise with stretching and strength training routines to improve all elements of fitness.", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000" },
+            { title: "Crossfit", desc: "High-intensity functional movements. Constantly varied, focused on strength, agility, and absolute endurance.", img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000" },
+            { title: "Dance Fitness", desc: "Burn calories through high-energy dance routines. A fun, rhythmic way to improve cardiovascular health.", img: "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=1000" },
+            { title: "HIIT Exercise", desc: "Short bursts of intense exercise alternated with low-intensity recovery periods for maximum fat burn.", img: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1000" },
+            { title: "Nutrition Consulting", desc: "Personalized dietary protocols designed by experts to fuel your specific training goals and recovery needs.", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1000" },
+            { title: "Personal Training", desc: "Dedicated 1-on-1 coaching with customized workout plans and expert guidance for guaranteed results.", img: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000" },
+            { title: "Spa Services", desc: "Premium recovery through massage, saunas, and rejuvenation treatments. Recover like an elite athlete.", img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1000" },
+            { title: "Weight Training", desc: "Master the iron. Focused on hypertrophy, absolute strength, and building a foundation of solid muscle.", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000" },
+            { title: "Yoga Classes", desc: "Improve flexibility, mental focus, and core strength through traditional and modern yoga practices.", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000" },
+            { title: "Zumba", desc: "High-energy Latin-inspired dance fitness program that combines cardio with muscle conditioning.", img: "https://images.unsplash.com/photo-1544216717-3bbf52512659?q=80&w=1000" }
+          ].map((program, i) => (
+            <div key={i} className="group bg-card border border-border-color overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"  style={{border:"1px solid #1f2937",borderRadius:"20px"}}>
+              <div className="relative h-64 w-full overflow-hidden">
+                <Image 
+                  src={program.img} 
+                  alt={program.title} 
+                  fill 
+                  className="object-cover group-hover:scale-110 transition-transform duration-700" 
+                />
               </div>
-              <Link href="/contact" className="bg-white hover:bg-neutral-200 text-black text-xs font-bold uppercase tracking-widest py-3 px-8 transition-colors self-start">
-                BOOK ASSESSMENT
-              </Link>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-black italic uppercase text-foreground mb-4">{program.title}</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed mb-6 flex-grow">
+                  {program.desc}
+                </p>
+                <Link href="/contact" className="inline-block bg-primary hover:bg-primary-hover text-primary-content text-[10px] font-bold uppercase tracking-widest py-3 px-6 transition-all self-start">
+                  ENROLL NOW
+                </Link>
+              </div>
             </div>
-          </div>
-
-          {/* Card 2: Nutrition Coaching */}
-          <div className="bg-background border border-border-color flex flex-col h-[500px]">
-            <div className="relative h-1/2 w-full overflow-hidden">
-              <Image src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop" alt="Nutrition" fill className="object-cover opacity-70" />
-            </div>
-            <div className="p-8 flex flex-col flex-grow bg-background">
-              <h3 className="text-2xl font-black italic uppercase mb-4">NUTRITION<br/>COACHING</h3>
-              <p className="text-xs text-foreground/70 leading-relaxed mb-6 flex-grow">
-                Macro-nutrient precision and recovery protocols to fuel elite performance and rapid hypertrophy.
-              </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center text-[10px] text-foreground/80 font-bold uppercase tracking-widest">
-                  <svg className="w-4 h-4 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                  WEEKLY MEAL AUDITS
-                </li>
-                <li className="flex items-center text-[10px] text-foreground/80 font-bold uppercase tracking-widest">
-                  <svg className="w-4 h-4 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                  HORMONE OPTIMIZATION
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Card 3: Command Classes */}
-          <div className="md:col-span-2 md:col-start-1 bg-background border border-border-color flex flex-col md:flex-row h-auto md:h-[300px]">
-             <div className="relative h-[250px] md:h-full md:w-1/2 overflow-hidden">
-               <Image src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1000&auto=format&fit=crop" alt="Classes" fill className="object-cover opacity-60" />
-             </div>
-             <div className="p-8 flex flex-col justify-center md:w-1/2">
-               <h3 className="text-2xl font-black italic uppercase mb-4">COMMAND CLASSES</h3>
-               <p className="text-xs text-foreground/70 leading-relaxed mb-8">
-                 High-intensity group sessions designed to break plateaus through competitive atmosphere and professional programming.
-               </p>
-               <Link href="/facilities" className="border border-border-color hover:bg-background-border text-foreground text-xs font-bold uppercase tracking-widest py-3 px-4 sm:px-6 text-center transition-colors">
-                 VIEW SCHEDULE
-               </Link>
-             </div>
-          </div>
-
-          {/* Card 4: Bio-Recovery */}
-          <div className="bg-background border border-border-color flex flex-col h-auto md:h-[300px]">
-            <div className="relative h-[150px] w-full overflow-hidden">
-              <Image src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop" alt="Recovery" fill className="object-cover opacity-60" />
-            </div>
-            <div className="p-6 flex flex-col flex-grow justify-between">
-               <div>
-                 <h3 className="text-xl font-black italic uppercase mb-2">BIO-RECOVERY ZONE</h3>
-                 <p className="text-[10px] text-foreground/70 leading-relaxed mb-4">
-                   Cold plunge, infrared saunas, and compression therapy. Because the win is earned in the recovery phase.
-                 </p>
-               </div>
-               <Link href="/facilities" className="border border-border-color hover:bg-background-border text-foreground text-[10px] font-bold uppercase tracking-widest py-3 px-4 sm:px-6 text-center transition-colors mt-auto">
-                 EXPLORE SPA
-               </Link>
-            </div>
-          </div>
-
+          ))}
         </div>
       </section>
 

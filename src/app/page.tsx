@@ -121,51 +121,41 @@ export default function Home() {
       {/* Dominate Your Discipline */}
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center mb-16">
-          <h2 className="text-3xl font-black italic uppercase tracking-widest mb-4 text-foreground">DOMINATE YOUR DISCIPLINE</h2>
+          <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-widest mb-4 text-foreground">DOMINATE YOUR DISCIPLINE</h2>
           <p className="text-base text-foreground/80 max-w-xl mx-auto leading-relaxed font-medium">
-            Selected high-intensity programs designed to destroy plateaus and forge an unbreakable physique.
+            Discover our comprehensive range of elite services designed to push your performance to the next level.
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Program 1 */}
-          <div className="relative h-[600px] group overflow-hidden rounded-xl shadow-2xl border border-border-color hover:border-primary/50 transition-all">
-            <Image src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1000&auto=format&fit=crop" alt="HIIT" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black via-black/60 to-transparent">
-              <div className="bg-primary text-primary-content text-xs font-bold uppercase tracking-widest py-1 px-3 mb-4 self-start shadow-[0_0_10px_rgba(207,255,4,0.5)]">INTENSITY EXTREME</div>
-              <h3 className="text-4xl font-black italic uppercase mb-6 text-white drop-shadow-md">HIIT<br/>RECKONING</h3>
-              <p className="text-white/80 text-sm mb-6 max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 font-medium">Cardiovascular conditioning pushed to its absolute limits. Burn fat, build resilience.</p>
-              <Link href="/programs" className="text-primary text-sm font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
-                EXPLORE PROGRAM <span className="text-xl">→</span>
-              </Link>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            { title: "Adult Sports", img: "https://images.unsplash.com/photo-1544698310-74ea9d1c8258?q=80&w=1000" },
+            { title: "Aerobics", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000" },
+            { title: "Crossfit", img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000" },
+            { title: "Dance Fitness", img: "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=1000" },
+            { title: "HIIT Exercise", img: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1000" },
+            { title: "Nutrition Consulting", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1000" },
+            { title: "Personal Training", img: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000" },
+            { title: "Spa Services", img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1000" },
+            { title: "Weight Training", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000" },
+            { title: "Yoga Classes", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000" },
+            { title: "Zumba", img: "https://images.unsplash.com/photo-1544216717-3bbf52512659?q=80&w=1000" }
+          ].map((program, i) => (
+            <div key={i} className="group relative h-[400px] overflow-hidden border border-border-color shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" style={{border:"1px solid #1f2937",borderRadius:"20px"}}>
+              <Image 
+                src={program.img} 
+                alt={program.title} 
+                fill 
+                className="object-cover group-hover:scale-110 transition-transform duration-700" 
+              />
+              <div className="absolute inset-x-0 bottom-0 p-6 bg-white dark:bg-black/90 backdrop-blur-sm transform translate-y-2 group-hover:translate-y-0 transition-transform border-t border-primary/20" >
+                <h3 className="text-xl font-black italic uppercase text-foreground mb-2 tracking-widest">{program.title}</h3>
+                <Link href="/programs" className="text-primary text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
+                  VIEW DETAILS <span className="text-lg">→</span>
+                </Link>
+              </div>
             </div>
-          </div>
-
-          {/* Program 2 */}
-          <div className="relative h-[600px] group overflow-hidden rounded-xl shadow-2xl border border-border-color hover:border-primary/50 transition-all">
-            <Image src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1000&auto=format&fit=crop" alt="Iron Mastery" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black via-black/60 to-transparent">
-              <div className="bg-white text-black text-xs font-bold uppercase tracking-widest py-1 px-3 mb-4 self-start">STRENGTH HEAVY</div>
-              <h3 className="text-4xl font-black italic uppercase mb-6 text-white drop-shadow-md">IRON<br/>MASTERY</h3>
-              <p className="text-white/80 text-sm mb-6 max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 font-medium">Progressive overload applied through heavy compound lifts. Master the barbell, master yourself.</p>
-              <Link href="/programs" className="text-primary text-sm font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
-                EXPLORE PROGRAM <span className="text-xl">→</span>
-              </Link>
-            </div>
-          </div>
-
-          {/* Program 3 */}
-          <div className="relative h-[600px] group overflow-hidden rounded-xl shadow-2xl border border-border-color hover:border-primary/50 transition-all">
-            <Image src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop" alt="Kinetic Flow" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black via-black/60 to-transparent">
-              <div className="bg-background text-foreground text-xs font-bold uppercase tracking-widest py-1 px-3 mb-4 self-start border border-border-color">RECOVERY FOCUSED</div>
-              <h3 className="text-4xl font-black italic uppercase mb-6 text-white drop-shadow-md">KINETIC<br/>FLOW</h3>
-              <p className="text-white/80 text-sm mb-6 max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 font-medium">Active recovery, mobility work, and dynamic stretching to keep you injury-free and primed.</p>
-              <Link href="/programs" className="text-primary text-sm font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
-                EXPLORE PROGRAM <span className="text-xl">→</span>
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
