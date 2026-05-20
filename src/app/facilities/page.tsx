@@ -41,7 +41,7 @@ export default function FacilitiesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Cardio Peak */}
             <div className="md:col-span-2 relative h-[400px] md:h-[600px] group overflow-hidden">
-              <Image src="https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1000&auto=format&fit=crop" alt="Cardio Peak" fill className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <Image src="https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1000&auto=format&fit=crop" alt="Cardio Peak" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black via-black/50 to-transparent">
                 <div className="bg-primary text-primary-content text-[10px] font-bold uppercase tracking-widest py-1 px-2 mb-2 self-start">CARDIO PEAK</div>
                 <h3 className="text-3xl font-black italic uppercase text-white">ELITE ENDURANCE</h3>
@@ -52,7 +52,7 @@ export default function FacilitiesPage() {
             <div className="flex flex-col gap-6 h-[400px] md:h-[600px]">
               {/* Iron Zone */}
               <div className="relative h-1/2 group overflow-hidden bg-background">
-                <Image src="https://images.unsplash.com/photo-1586401700818-192e071727c6?q=80&w=800&auto=format&fit=crop" alt="Iron Zone" fill className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                <Image src="https://images.unsplash.com/photo-1586401700818-192e071727c6?q=80&w=800&auto=format&fit=crop" alt="Iron Zone" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black to-transparent">
                   <h3 className="text-2xl font-black italic uppercase text-white">IRON ZONE</h3>
                 </div>
@@ -60,7 +60,7 @@ export default function FacilitiesPage() {
               
               {/* Precision Rigs */}
               <div className="relative h-1/2 group overflow-hidden bg-background">
-                <Image src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop" alt="Precision Rigs" fill className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                <Image src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop" alt="Precision Rigs" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black to-transparent">
                   <h3 className="text-2xl font-black italic uppercase text-white">PRECISION RIGS</h3>
                 </div>
@@ -116,7 +116,7 @@ export default function FacilitiesPage() {
 
           <div className="relative h-[500px] border border-primary/30 p-2 transform rotate-1">
             <div className="relative w-full h-full transform -rotate-1 overflow-hidden bg-background">
-              <Image src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" alt="Locker Room" fill className="object-cover opacity-70 grayscale" />
+              <Image src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" alt="Locker Room" fill className="object-cover grayscale" />
             </div>
           </div>
         </div>

@@ -175,10 +175,10 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="relative h-[400px] bg-background border-y border-border-color">
+      <section className="relative z-30 h-[400px] bg-background border-y border-border-color">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6262100808544!2d-118.23467652391062!3d34.053428173156694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c648834c4423%3A0xc3160a28f43eb7ea!2sIndustrial%20District%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1709123456789!5m2!1sen!2sus" 
-          className="absolute inset-0 w-full h-full border-0 grayscale invert contrast-125 opacity-40" 
+          className="absolute inset-0 w-full h-full border-0 grayscale invert contrast-125" 
           allowFullScreen={false} 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"

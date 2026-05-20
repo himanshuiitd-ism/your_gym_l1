@@ -5,6 +5,20 @@ import Navbar from "@/components/Navbar";
 import BottomNav from "@/components/BottomNav";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import GymEquipment3D from "@/components/GymEquipment3D";
+import { Outfit, Space_Grotesk } from "next/font/google";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Elite Performance",
@@ -18,8 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen pt-16 md:pt-20 pb-24 md:pb-0">
+      <body className={`${outfit.variable} ${spaceGrotesk.variable} flex flex-col min-h-screen pt-16 md:pt-20 pb-24 md:pb-0 font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <GymEquipment3D />
           <Navbar />
           <BottomNav />
           <WhatsAppButton />
