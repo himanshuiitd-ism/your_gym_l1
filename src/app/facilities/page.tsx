@@ -52,7 +52,7 @@ export default function FacilitiesPage() {
             <div className="flex flex-col gap-6 h-[400px] md:h-[600px]">
               {/* Iron Zone */}
               <div className="relative h-1/2 group overflow-hidden bg-background">
-                <Image src="https://images.unsplash.com/photo-1586401700818-192e071727c6?q=80&w=800&auto=format&fit=crop" alt="Iron Zone" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Image src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Iron Zone" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black to-transparent">
                   <h3 className="text-2xl font-black italic uppercase text-white">IRON ZONE</h3>
                 </div>
