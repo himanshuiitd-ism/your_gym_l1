@@ -51,41 +51,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Premium Blueprint Tech-Grid Backgrounds */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.8;
-  background-image: 
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-position: center top;
-}
 
-/* Interactive Ambient Glows */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.15;
-  background-image: 
-    radial-gradient(circle at 10% 20%, var(--primary) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, var(--primary) 0%, transparent 40%);
-  filter: blur(80px);
-}
 
-.dark body::after {
-  opacity: 0.12;
-  background-image: 
-    radial-gradient(circle at 15% 25%, #6d28d9 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, #cfff04 0%, transparent 45%);
-}
 
 /* Custom Selection Color */
 ::selection {

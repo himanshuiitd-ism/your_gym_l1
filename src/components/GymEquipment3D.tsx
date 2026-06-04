@@ -208,11 +208,6 @@ export default function GymEquipment3D() {
 
     scene.add(kettlebell);
 
-    // --- BACKGROUND GRID HELPER ---
-    const gridHelper = new THREE.GridHelper(32, 32, 0x444444, 0x1d1d1f);
-    gridHelper.position.set(0, 0, -4.5);
-    gridHelper.rotation.x = Math.PI / 2;
-    scene.add(gridHelper);
 
     // --- BACKGROUND NEON PARTICLE FIELD ---
     const particleCount = 250;
@@ -547,18 +542,6 @@ export default function GymEquipment3D() {
       particles.rotation.x = mouse.y * 0.05;
       particles.rotation.z = mouse.x * 0.05;
 
-      // --- ANIMATE BACKGROUND GRID ---
-      // Rotate grid along scroll and warp tilt with mouse position
-      gridHelper.rotation.z = scrollFraction * Math.PI * 0.5;
-      gridHelper.rotation.x = (Math.PI / 2) + mouse.y * 0.08;
-      gridHelper.rotation.y = mouse.x * 0.08;
-
-      // Sink/fade grid out near CTA section
-      if (scrollFraction > 0.8) {
-        gridHelper.position.z = -4.5 - (scrollFraction - 0.8) * 5;
-      } else {
-        gridHelper.position.z = -4.5;
-      }
 
       // Render
       renderer.render(scene, camera);
